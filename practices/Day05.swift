@@ -10,3 +10,7 @@ print("User: \(userName)")
 print("Daily Goal: \(dailyGoal)")
 print("Current Steps: \(currentSteps)")
 print("Goal Completed: \(isGoalCompleted)")
+
+
+
+//end

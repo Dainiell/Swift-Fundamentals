@@ -9,3 +9,6 @@ let subtotal = price * Double(cartQuantity)
 print("Product: \(productName)")
 print("First Total: \(firstsubtotal)")
 print("Updated Total: \(subtotal)")
+
+
+//end

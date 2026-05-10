@@ -1,16 +1,19 @@
-let userName: String = "Ralph"
-let dailyGoal: Int  = 10000
-var currentSteps: Int = 2500
-var isGoalCompleted: Bool = false
-
-currentSteps = 10000
-isGoalCompleted = true 
-
-print("User: \(userName)")
-print("Daily Goal: \(dailyGoal)")
-print("Current Steps: \(currentSteps)")
-print("Goal Completed: \(isGoalCompleted)")
+var playlist: [String] = ["Blinding Lights", "Levitating", "Stay"]
 
 
+playlist.append("Peaches")
+playlist.insert("Montero", at: 0)
 
-//end
+
+print("Total Songs: \(playlist.count)")
+
+print("First: \(playlist.first ?? "No song")")
+print("Last: \(playlist.last ?? "No song")")
+
+playlist.remove(at: 3)
+
+for (index,song) in playlist.enumerated() {
+    print("[\(index)] \(song)")
+    
+}
+

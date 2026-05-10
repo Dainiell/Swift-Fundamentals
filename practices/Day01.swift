@@ -1,17 +1,19 @@
-let productName = "Keyboard"
-let price = 1500.0
-let quantity = 2
-let isAvailable = true    
-
-let subtotal = price * Double(quantity)
+let appName:String = "SwiftQuest"
+var playerName: String? = nil 
+var playerScore: Int = 0
+var playerLevel: Double = 1.0 
 
 
-print("Product: \(productName)")
-print("Price: \(price)")
-print("Quantity: \(quantity)")
-print("Subtotal: \(subtotal)")
-print("Available: \(isAvailable)")
+playerName = "Ralph"
 
-//end
+print("App: \(appName)")
 
+if let name = playerName {
+    print("Player: \(name)")
+}else {
+    print("Set your name: ")
+    
+}
 
+print("Score: \(playerScore)")
+print("Level: \(playerLevel)")

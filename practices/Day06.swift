@@ -1,31 +1,20 @@
-var cart: [String] = ["Shoes", "Shirt", "Pants", "Shoes", "Hat"]
+let score = 78
 
 
+if score >= 90 && score <= 100 {
+    print("A")
+    
+}else if score >= 75 && score <= 89 {
+    print("B") 
 
-print("Shoes in cart: \(cart.contains("Shoes"))")
-
-if let index = cart.firstIndex(of: "Shoes") {
-    print("First Shoes at index: \(index)")
-} else {
-    print("Item not found")
-}
-
-
-for item in cart {
-
-    if item == "Shoes" {
-        print("Duplicate: \(item)")
-        
-    }else {
-        print("Item: \(item)")
-        
-    }
-
-}
+}else if score >= 60  && score <= 74 {
+    print("C")
+}else if score < 60 {
+    print("F")
+    
+}else{
+    print("\(score)")
+    
+} 
 
 
-cart.removeFirst()
-
-print("Shoes in cart: \(cart.contains("Shoes"))")
-
-print("Updated Count: \(cart.count)")

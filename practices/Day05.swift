@@ -1,19 +1,10 @@
-var playlist: [String] = ["Blinding Lights", "Levitating", "Stay"]
+let age = 20
+let isMember = true
 
-
-playlist.append("Peaches")
-playlist.insert("Montero", at: 0)
-
-
-print("Total Songs: \(playlist.count)")
-
-print("First: \(playlist.first ?? "No song")")
-print("Last: \(playlist.last ?? "No song")")
-
-playlist.remove(at: 3)
-
-for (index,song) in playlist.enumerated() {
-    print("[\(index)] \(song)")
+if isMember == true && age >= 18  {
+    print("Welcome to the VIP event!")
+    
+}else {
+    print("Not a Member and Age is Restricted")
     
 }
-

@@ -1,16 +1,13 @@
-var inventory: [String] = ["Sword", "Shield", "Potion"]
+let originalPrice: Double = 1200.0
+let discountPercent: Double = 25.0
 
-inventory.append("Armor")
-inventory.insert("Ring", at: 0)
 
-print("Inventory Count: \(inventory.count)")
+let defaultPrice = originalPrice * discountPercent / 100
+let discountedPrice = originalPrice - defaultPrice
 
-if let first = inventory.first {
-    print("First: \(first)")
-}
+print("Discount amount: \(defaultPrice)")
+print("Final price: \(discountedPrice)")
 
-if let last = inventory.last {
-    print("Last: \(last)")
-}
 
-print("Index 2: \(inventory[2])")
+
+

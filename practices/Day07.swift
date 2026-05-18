@@ -1,20 +1,17 @@
-var Chats: [String] = ["Mom", "Best Friend", "Group Chat"]
+// Task: Create variables of each basic type and print them with descriptions
+
+let playerName: String = "Lena"
+let playerScore: Int = 150
+let isGameOver: Bool = true
 
 
-Chats.append("Teacher")
-Chats.insert("Girlfriend",at: 0)
+print("Player: \(playerName)")
+print("Score: \(playerScore)")
+print("Game Over: \(isGameOver)")
 
 
-print("Total Pinned Chats: \(Chats.count)")
 
-print("First: \(Chats.first ?? "No first chat")")
-print("Last: \(Chats.last ?? "No last chat")")
-
-if let index = Chats.firstIndex(of: "Group Chat") {
-    Chats.remove(at: index)
-}
-
-for (index , Chats) in Chats.enumerated() {
-    print("[\(index)] \(Chats)")
+if isGameOver {
+    print("Game Over!: \(playerName) Score: \(playerScore) points")
     
 }

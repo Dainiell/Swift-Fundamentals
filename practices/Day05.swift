@@ -1,10 +1,51 @@
-let age = 20
-let isMember = true
+let freeApp = true
 
-if isMember == true && age >= 18  {
-    print("Welcome to the VIP event!")
+if freeApp == true {
+    print("You are using the free version of the app. Buy the full version of the app to get access to all of its features.")
+    
+}
+
+
+
+
+
+let morningTemperature = 70
+let eveningTemperature = 80
+
+if morningTemperature < eveningTemperature {
+    print("The temperature is \(morningTemperature)°F")
+}else {
+    print("The temperature is \(eveningTemperature)°F")
+}
+
+
+
+
+
+let temperatureDegree = "Fahrenheit" 
+ 
+if temperatureDegree == "Fahrenheit" {
+    print("App uses Fahrenheit degrees.")
     
 }else {
-    print("Not a Member and Age is Restricted")
+    print("App uses Celsius degrees.")
     
+}
+
+if temperatureDegree == "Fahrenheit" || temperatureDegree == "Celsius" {
+    print("App is configured properly.")
+    
+}else {
+    print("App isn’t configured properly.")
+    
+}
+
+
+
+
+switch temperatureDegree {
+    case "Fahrenheit": print("The app is configured for the US")
+    case "Celsius": print("The app is configured for Europe")
+    default: print("The app has an unknown configuration in this case.")
+
 }

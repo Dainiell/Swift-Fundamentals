@@ -13,9 +13,9 @@ let morningTemperature = 70
 let eveningTemperature = 80
 
 if morningTemperature < eveningTemperature {
-    print("The temperature is \(morningTemperature)°F")
-}else {
-    print("The temperature is \(eveningTemperature)°F")
+  print("It is colder in the morning.")
+} else {
+  print("It is colder in the evening.")
 }
 
 

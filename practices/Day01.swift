@@ -1,12 +1,33 @@
-let day = "Monday"
-let dailyTemperature = 75 
-print("Today is \(day). Raise and Shine!")
-print("The temperature on \(day) is  \(dailyTemperature)°F")
-var Temperature = 70
-print("The temperature on \(day) morning is \(Temperature)°F")
+let name = "Ralph"
+let age = 20 
+print("My name is \(name) and I am \(age) years old.")
 
-Temperature = 80 
-print("The temperature on \(day) evening is  \(Temperature) °F")
-let weeklyTemperature = 75
+let pi = 3.14 // This is inference 
+let radius: Double = 5.0 // This is annotation
+print("The value of pi is \(pi) and the radius is \(radius)")
 
-print("The average temperature this week is \(dailyTemperature)°F")
+let a = 12 
+let b = 5 
+print("A + B is \(a + b)")
+print("A - B is \(a - b)")
+print("A * B is \(a * b)")
+print("A / B is \(a / b)")
+print("A % B is \(a % b)")
+
+
+let isRaining = true
+let hasUmbrella = false
+
+let willGetWet = isRaining && !hasUmbrella
+print("Will get wet: \(willGetWet)")
+
+let isSafeFromRain = !isRaining || hasUmbrella
+print("Safe from rain: \(isSafeFromRain)")
+
+var score = 100
+score += 10 
+print("\(score)")
+score -= 20 
+print("\(score)")
+score *= 2
+print("\(score)")

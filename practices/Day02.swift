@@ -1,26 +1,30 @@
-let levelScore = 10 
-var gameScore = 0 
+var levelScores: [Int] =  [] 
 
-gameScore += levelScore 
+if levelScores.count == 0 {
+    print("Welcome to the game!")
+    print("Press start to play the game!")
+    
+    
+}
 
-print("The game's score is \(gameScore)")
-var levelBonusScore  = 10.0 
-levelBonusScore = 20 
+let firstLevelScore = 10 
+levelScores.append(firstLevelScore)
+print("The first level's score is \(levelScores [0])")
 
-print("The game's score is \(levelBonusScore)")
+let levelBonusScore = 40 
 
-gameScore +=  Int(levelBonusScore)
-print("The game's final score is \(gameScore)")
+levelScores[0] += levelBonusScore
+print("\(levelScores[0])")
 
-let levelLowestScore  = 50 
-let levelHighestScore = 99 
-let levels = 10 
+let freeLevelScores: [Int] = [20,30] 
+levelScores += freeLevelScores
+print("\(levelScores)")
 
-let levelScoreDifference = levelHighestScore - levelLowestScore 
-print("\(levelScoreDifference)")
+let freeLevels = 3
 
-let levelAverageScore = levelScoreDifference / levels 
-print("The level's average score is \(levelAverageScore)")
-
-let averageLevelScore = Double (levelScoreDifference) / Double(levels)
-print("The level's average score is \(averageLevelScore)")
+if levelScores.count == freeLevels {
+    print("You have to buy the game in order to play its full version.") 
+        levelScores =  [] 
+    print("Game restarted!")
+    
+}

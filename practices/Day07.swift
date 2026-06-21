@@ -1,41 +1,22 @@
-var month = 1
+var goldBars = 0
 
-while month < 5 {
-    print("Month: \(month)")
-    
-    for i in 1...4 {
-        if i == 2 {
-            break
-        }
-        print("Count: \(i)")
-        
-    }
-    month += 1
 
-    print(" ")
-    
-}
-
-//-----------------------------------------
-
-let Levels = 10 
-let freeLevels = 4
-let bonusLevels = 3 
-
-for Level in 1...Levels {
-    if Level == bonusLevels {
-        print("Skip bonus level is \(bonusLevels)")
-            continue
-    }
-    print("Playing level \(Level)")
-
-    if Level == freeLevels {
-       print("You have played all \(freeLevels) free levels. Buy the game to play the remaining \(Levels - freeLevels) levels.")
-        break
-        
-    }
+func incrementInventory(_ inventory: inout Int, by amount: Int = 100) {
+  inventory += amount
 }
 
 
+incrementInventory(&goldBars)
+print(goldBars)
 
+incrementInventory(&goldBars)
+print(goldBars)
 
+incrementInventory(&goldBars)
+print(goldBars)
+
+incrementInventory(&goldBars, by: 300)
+print(goldBars)
+
+incrementInventory(&goldBars, by: 50)
+print(goldBars)

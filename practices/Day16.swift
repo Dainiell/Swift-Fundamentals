@@ -64,6 +64,45 @@ print("lowest range: \(ranges.min)")
 print("Highest range: \(ranges.max)")
 
 
-func subject(_ subs: [String]) -> String {
-    
+func subject(subs: [String: Int])  {
+    for (subs,score) in subs {
+        if score  >= 90 {
+            print("\(subs): Excellent")
+        }else if  score >=  75 {
+            print("\(subs): Passed")
+        }else {
+            print("\(subs): Failed")
+        }
+    }
 } 
+subject(subs: ["Swift Programming": 97 , "Data Security": 95, "Data Analyst": 92])
+
+func checkEmail(email: String?) {
+    guard let email = email else {
+        print("No email provided")
+        return
+    }
+    print("Email: \(email)")
+}
+checkEmail(email: nil)
+checkEmail(email: "ralph@lpu.edu.ph")
+
+
+func validateLogin(username: String, password: String) -> (success: Bool, message: String) {
+    if password.count < 8 {
+        return (false, "Password too short")
+    } else if username.isEmpty {
+        return (false, "Username required")
+    } else {
+        return (true, "Login successful")
+    }
+}
+
+let result1 = validateLogin(username: "Ralph", password: "123")
+print(result1.message)
+
+let result2 = validateLogin(username: "", password: "12345678")
+print(result2.message)
+
+let result3 = validateLogin(username: "Ralph", password: "12345678")
+print(result3.message)

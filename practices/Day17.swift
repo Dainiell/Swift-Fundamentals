@@ -84,3 +84,30 @@ let noteSize: (Int) -> String = { length in
 print(noteSize(120))  
 print(noteSize(48))    
 print(noteSize(15))    
+
+func checkReceipt(number: String?) {
+    guard let number = number else {
+        print("No receipt attached")
+        return
+    }
+    print("Receipt: \(number)")
+}
+
+checkReceipt(number: nil)
+checkReceipt(number: "OR-88213")
+
+
+func securityLock(pin: String , balance: Int) -> (valid: Bool , message: String) {
+    if pin.count < 4 {
+        return (false,"PIN too short")  
+    }
+    if balance < 0 || balance < 10 {
+        return (false, "Insufficient balance")
+        
+    } 
+    return (true, "Account valid")
+        
+}
+let test1 = securityLock(pin: "0831", balance: 6)
+print(test1.message)
+

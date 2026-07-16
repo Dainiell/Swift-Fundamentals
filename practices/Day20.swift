@@ -14,9 +14,13 @@ func applyOperation(number: Int,operation:(Int) -> Int) -> Int {
 print(applyOperation(number: 5) {$0 * 3})    
 
 
-
-
-
+func annouceResult(score:Int,handler:(String) -> Void) {
+    let message = score >= 80 ? "Great Job!" : "Keep Practicing"
+    handler(message)
+}
+annouceResult(score: 85) { message in 
+    print(message)
+}
 
 var isCorrectAnswer = { (userAnswer: String, correctAnswer: String) -> Bool in
     return userAnswer == correctAnswer 
@@ -32,10 +36,3 @@ var doubleNumber = { (number: Int) -> Int in
 print(doubleNumber(5))
 
 
-func annouceResult(score:Int,handler:(String) -> Void) {
-    let message = score >= 80 ? "Great Job!" : "Keep Practicing"
-    handler(message)
-}
-annouceResult(score: 85) { message in 
-    print(message)
-}

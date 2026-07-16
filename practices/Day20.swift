@@ -32,3 +32,10 @@ var doubleNumber = { (number: Int) -> Int in
 print(doubleNumber(5))
 
 
+func annouceResult(score:Int,handler:(String) -> Void) {
+    let message = score >= 80 ? "Great Job!" : "Keep Practicing"
+    handler(message)
+}
+annouceResult(score: 85) { message in 
+    print(message)
+}

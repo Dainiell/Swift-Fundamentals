@@ -22,6 +22,7 @@ annouceResult(score: 85) { message in
     print(message)
 }
 
+
 var isCorrectAnswer = { (userAnswer: String, correctAnswer: String) -> Bool in
     return userAnswer == correctAnswer 
     
@@ -36,3 +37,30 @@ var doubleNumber = { (number: Int) -> Int in
 print(doubleNumber(5))
 
 
+
+let greet = { (greetings:String) -> String in 
+    return greetings
+}
+print(greet("Good night Mr.Ralph"))
+
+
+func ageCheck (age:Int, msg: (String) -> Void) -> Void {
+    let ageMsg = "Your age is passed!"
+    msg(ageMsg)
+
+    
+}
+ageCheck(age: 85) { ageMsg in 
+    print(ageMsg)
+
+}
+
+
+let paidCheck = { (amount: Int, isPaid: Bool, status:(String) -> Void) in 
+    let checker = isPaid ? "Your Paid" : "Please update your payment"
+    status(checker)
+
+}
+paidCheck(225,true) { message in 
+    print(message)
+}

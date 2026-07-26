@@ -24,7 +24,7 @@ struct studyCard {
         return "\(subject) , \(diff) , \(timesReview) , \(isMastered)"
     }
     var isMastered: Bool {
-        return timesReview >= 5
+        return timesReview >= 1
     }
 }
 
@@ -38,9 +38,5 @@ var cards: [studyCard] = [
 ]
 print(cards[0].format)
 
-func totalPoints(cards: [studyCard]) -> Int {
-    return cards.reduce(0) {$0 + $1.diff.pointValue}
-}
-
-let total = totalPoints(cards: cards)
-print(total)
+let level = Difficulty.easy
+print(level.pointValue)

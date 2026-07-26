@@ -51,6 +51,10 @@ func reviewSession(sessions: [Task], onReview: (Priority, Bool) -> Void) {
         onReview(session.priority, session.isDone)
     }
 }
+reviewSession(sessions: tasks) { Priority, isDone in
+    print("\(Priority): \(isDone ? "Done" : "Pending")")
+
+}
 
 let doneCount = tasks.reduce(0) { count, task in
     count + (task.isDone ? 1:0)
@@ -62,7 +66,4 @@ tasks[0].done()
 print(tasks[0].statusLabel)
 
 
-reviewSession(sessions: tasks) { Priority, isDone in
-    print("\(Priority): \(isDone ? "Done" : "Pending")")
 
-}

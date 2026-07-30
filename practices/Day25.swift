@@ -56,6 +56,3 @@ var studentDB: [students] = [
 print(studentDB[0].description)  
 studentDB[2].Architect(for: studentDB[2])
 studentDB[3].validation(for: studentDB[3])
-
-let units = studentType.IT 
-print(units)

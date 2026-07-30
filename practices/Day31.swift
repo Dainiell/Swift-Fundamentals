@@ -26,7 +26,3 @@ struct Inventory {
         self.products = products
     }
 }
-    
-//new
-
-//new2

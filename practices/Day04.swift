@@ -81,3 +81,53 @@ switch streakDays {
  default: print("Do more keep it up!")
     
 }
+
+
+let studentName: String = "Ralph"
+var score: Int = 0 
+let totalQuestion: Int = 10  
+
+let correctAnswer = 7 
+
+let percentage: Double = Double(correctAnswer) / Double(totalQuestion) * 100
+
+print("\(studentName) got Score: 7/10 \(percentage)%")
+
+
+
+if percentage >= 75 {
+    print("Passed")
+}else if (50...74).contains(percentage) {
+    print("Needs Review")
+}else {
+    print("Failed")
+}
+
+switch percentage {
+    case 75...100: print("Passed")
+    case 50...74: print("Needs Review")
+    default: print("Failed")
+}
+
+
+let answers: [Bool] = [true,true,true,true,true,true,true,true,true,true]
+var loopsScore = 0 
+for answer in answers {
+    if answer {
+        loopsScore += 1
+    }
+}
+print("Loop Count: \(loopsScore)")
+
+let filter = answers.filter {$0}.count
+print("Filter Count: \(filter)")
+
+
+let subjectScores:[String:Int] = ["Math": 8, "Science": 6,"History": 9]     
+
+for (subjects,score) in subjectScores {
+    print("\(subjects): \(score)")
+}
+
+let topSubject:(name:String,score:Int) = ("History" , 9) 
+print("Top Subject: \(topSubject.name) with \(topSubject.score)")

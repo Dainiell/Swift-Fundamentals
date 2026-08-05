@@ -1,3 +1,6 @@
+import SwiftUI
+import Foundation
+
 enum Role {
     case Junior,MidLevel,Senior
 }

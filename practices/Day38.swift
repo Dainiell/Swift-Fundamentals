@@ -16,5 +16,5 @@ class GymMember {
 let member1 = GymMember(name: "Ralph" , MembershipType: "Premium") 
 print(member1.checkIn())
 
- member1.MembershipType = "Regular"
+member1.MembershipType = "Regular"
 print(member1.checkIn()) 
